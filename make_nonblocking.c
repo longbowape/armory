@@ -5,8 +5,7 @@ extern int make_nonblocking(int fd) {
     if (flags == -1) {
         return -1;
     }
-    flags |= O_NONBLOCK;
-    if (fcntl(fd, F_SETFL, flags) == -1) {
+    if (fcntl(fd, F_SETFL, flags | O_NONBLOCK) == -1) {
         return -1;
     }
     return 0;
