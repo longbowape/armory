@@ -3,4 +3,4 @@ project(armory)
 
 set(CMAKE_C_STANDARD 90)
 
-add_library(armory armory.h make_nonblocking.c)
+add_library(armory armory.h make_nonblocking.c is_space.c)
